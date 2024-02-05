@@ -1,14 +1,17 @@
-body{
+body {
     font-family: Arial, sans-serif;
-    background-color: #1f002b;
+    background-image: linear-gradient(to bottom, #e798ff, #b9f6ff);
+    justify-content: center;
+    align-items: center;
+    height: 78vh;
 }
 
 .container {
-    margin-top:50px;
-    max-width: 500px;
-    margin: 0 auto;
+    margin-top:10%;
+    max-width: 30%;
+    margin-left: 35%;
     padding: 20px;
-    background-image: linear-gradient(to bottom, #e6b3f6, #b9f6ff);
+    background-color: rgba(222, 222, 222, 0.3);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -16,18 +19,20 @@ body{
 h2 {
     text-align: center;
     margin-bottom: 20px;
+    margin-top: -5px;
+    font-size: calc(100% + 20px);
 }
 
+
 .form-group {
- 
-    align-items: center;
     margin-bottom: 20px;
 }
 
 .form-group label {
-    margin-left: 40px;
-    display: block;
-    margin-bottom: 5px;
+    margin-left: 9%;
+    display: flex;
+    margin-top:-8px;
+    margin-bottom: -5px;
     font-weight: bold;
 }
 
@@ -37,21 +42,74 @@ h2 {
     border: 1px solid #ccc;
     border-radius: 15px;
     margin-right: 0px;
-    margin-left: 30px;
+    margin-left: 34px;
+    margin-top: 10px;
 }
 
 .form-group button {
-    margin-left:120px;
-    align-self:center;
+    margin-left: 120px;
+    align-self: center;
     width: 50%;
     padding: 10px;
-    background-color:#4945a0;
+    background-color: #4945a0;
     color: #fff;
     border: none;
     border-radius: 30px;
     cursor: pointer;
 }
 
+#emo {
+    margin-left: -3.7%;
+    margin-top: 0.9%;
+    padding:1%;
+    position: absolute;
+    width: 1.7%;
+    max-width: auto;
+    height: auto;
+}
+
 .form-group button:hover {
-    background-color:  #4CAF50;
+    background-color: #4CAF50;
+}
+
+.password-toggle {
+    position: relative;
+}
+#toggle-eye {
+    width: 5%;
+    margin-right: 10%;
+    position: absolute;
+    top: 57%;
+    right: 10px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.logo-box{    
+    position: absolute;
+    top: 12%;
+    left: 35.2%;
+    width: 32.2%;
+    height: 15vh;
+    background: linear-gradient(to bottom right, #8B008B, #8B0000);
+    border-radius: 15px;
+    z-index: -1;
+    overflow: hidden; /* Added property */
+    clip-path: polygon(0 0, 100% 0, 100% 62%, 0 62%); /* Added property */
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+    .form-group {
+        margin-bottom: 10px;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+    }
+    button[type="submit"] {
+        width: 100%;
+    }
 }

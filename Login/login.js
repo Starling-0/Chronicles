@@ -8,3 +8,16 @@ document.querySelector('form').addEventListener('submit', function(event) {
     console.log('Password:', password);
 
 });
+
+
+function togglePasswordVisibility() {
+    var passwordInput = document.getElementById("password");
+    var toggleEye = document.getElementById("toggle-eye");
+    if (passwordInput.type === "password") {
+        passwordInput.type = "text";
+        toggleEye.src = "../Login/img/eye.png";
+    } else {
+        passwordInput.type = "password";
+        toggleEye.src = "../Login/img/hide.png";
+    }
+}
